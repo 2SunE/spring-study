@@ -20,5 +20,16 @@
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>	 
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
 	</context:component-scan>
+	
+	<!-- View 이름을 해석하는 역할을 하는 객체다, View 이름을 JSP로 연결(매핑) 시켜주는 객체 -->
+	<!-- Controller의 요청 매핑 메소드의 리턴값을 내부 리소스(JSP) 경로로 해석 -->
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="order" value="1" />
+		<property name="prefix" value="/WEB-INF/views/"/> <!-- 접두사 -->
+		<property name="suffix" value=".jsp"/> <!-- 접미사 -->
+	</bean>
 
+	<!-- DispatcherServlet 실행이 필요없는 resources 경로 설정 -->
+	<!-- MVC와 무관한 Resource URL 매핑 (*.css, *.js, *.jpg, *.png) -->
+	<mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>
 </beans>
