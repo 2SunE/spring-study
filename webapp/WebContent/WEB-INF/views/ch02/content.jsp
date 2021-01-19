@@ -22,20 +22,17 @@
 					<h5>GET 방식 매핑</h5>
 					<div>
 						<!-- 상대 경로 -->
-						<a href="getMethod" class="btn btn-info">getMethod() 요청</a> <a
-							href="postMethod" class="btn btn-danger">postMethod() 요청</a>
+						<a href="getMethod" class="btn btn-info">getMethod() 요청</a> 
+						<a href="postMethod" class="btn btn-danger">postMethod() 요청</a>
 					</div>
 				</div>
 				<div class="sector">
 					<h5>POST 방식 매핑</h5>
 					<div>
-						<form method="post" action="getMethod"
-							style="display: inline-block;">
-							<input class="btn btn-danger" type="submit"
-								value="getMethod() 요청" />
+						<form method="post" action="getMethod" style="display: inline-block;">
+							<input class="btn btn-danger" type="submit" value="getMethod() 요청" />
 						</form>
-						<form method="post" action="postMethod"
-							style="display: inline-block;">
+						<form method="post" action="postMethod" style="display: inline-block;">
 							<input class="btn btn-info" type="submit" value="postMethod() 요청" />
 						</form>
 					</div>
